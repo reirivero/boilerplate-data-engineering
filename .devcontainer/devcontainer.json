@@ -1,0 +1,36 @@
+{
+    "name": "Apache Airflow",
+    "dockerComposeFile": "../docker/docker-compose.yaml",
+    "service": "airflow",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-azuretools.vscode-docker",
+                "ms-toolsai.jupyter",
+                "github.vscode-pull-request-github",
+                "eamodio.gitlens",
+                "ms-python.vscode-pylance",
+                "mtxr.sqltools",
+                "mtxr.sqltools-driver-pg",
+                "rogalmic.bash-debug",
+                "ms-azuretools.vscode-docker",
+                "dbaeumer.vscode-eslint",
+                "ecmel.vscode-html-css",
+                "timonwong.shellcheck",
+                "redhat.vscode-yaml",
+                "rogalmic.bash-debug"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.shell.linux": "/bin/bash"
+            }
+        }
+    },
+    "forwardPorts": [8080, 5555, 5432, 6379],
+    "workspaceFolder": "/opt/airflow",
+    // for users who use non-standard git config patterns
+    // https://github.com/microsoft/vscode-remote-release/issues/2084#issuecomment-989756268
+    "initializeCommand": "cd \"${localWorkspaceFolder}\" && git config --local user.email \"$(git config user.email)\" && git config --local user.name \"$(git config user.name)\"",
+    "overrideCommand": true
+}

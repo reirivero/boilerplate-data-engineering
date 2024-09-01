@@ -1,0 +1,35 @@
+# Web scraping
+requests
+beautifulsoup4
+selenium
+webdriver-manager
+
+# Validación y serialización de datos
+pydantic
+
+# Manejo de datos
+pandas
+numpy
+jupyter
+
+# Carga de datos
+google-cloud-bigquery
+mysql-connector-python
+psycopg2
+pyodbc
+
+# Formatos de archivo
+json
+lxml
+
+# Kafka para streaming de datos
+kafka-python
+
+# Herramientas de desarrollo y calidad de código
+yapf
+black
+flake8
+pylint
+
+# Otros
+python-dotenv
