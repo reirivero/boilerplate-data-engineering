@@ -91,9 +91,9 @@ code .
 #### Ejecutar el Proyecto
 Para ejecutar el flujo ETL, puedes usar el archivo main.py:
 
-    ```python
-    python src/main.py
-    ```
+```bash
+python src/main.py
+```
 
 #### Ejecutar Pruebas Unitarias
 Para ejecutar las pruebas unitarias, usa el siguiente comando:
