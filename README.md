@@ -8,7 +8,48 @@ Este es un proyecto de ejemplo de Ingeniería de Datos utilizando Python, Airflo
 ### Estructura del Proyecto
 
 ```
-data-engineering-project/ │ ├── src/ │ ├── extraction/ │ │ ├── init.py │ │ └── extract_data.py │ ├── transformation/ │ │ ├── init.py │ │ └── transform_data.py │ ├── loading/ │ │ ├── init.py │ │ └── load_data.py │ ├── utils/ │ │ ├── init.py │ │ ├── logging_config.py │ │ └── config.py │ ├── init.py │ └── main.py │ ├── dags/ │ └── example_dag.py │ ├── tests/ │ ├── init.py │ ├── test_extraction.py │ ├── test_transformation.py │ └── test_loading.py │ ├── docker/ │ ├── Dockerfile │ └── docker-compose.yml │ ├── .devcontainer/ │ └── devcontainer.json │ ├── logs/ │ └── airflow.log │ ├── .env ├── .gitignore ├── requirements.txt └── README.md
+data-engineering-project/
+│
+├── src/
+│   ├── extraction/
+│   │   ├── __init__.py
+│   │   └── extract_data.py
+│   ├── transformation/
+│   │   ├── __init__.py
+│   │   └── transform_data.py
+│   ├── loading/
+│   │   ├── __init__.py
+│   │   └── load_data.py
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── logging_config.py
+│   │   └── config.py
+│   ├── __init__.py
+│   └── main.py
+│
+├── dags/
+│   └── example_dag.py
+│
+├── tests/
+│   ├── __init__.py
+│   ├── test_extraction.py
+│   ├── test_transformation.py
+│   └── test_loading.py
+│
+├── docker/
+│   ├── Dockerfile
+│   └── docker-compose.yml
+│
+├── .devcontainer/
+│   └── devcontainer.json
+│
+├── logs/
+│   └── airflow.log
+│
+├── .env
+├── .gitignore
+├── requirements.txt
+└── README.md
 ```
 
 ### Requisitos
@@ -21,26 +62,30 @@ data-engineering-project/ │ ├── src/ │ ├── extraction/ │ │ �
 ### Instalación
 
 1. Clona el repositorio:
-    ```bash
-    git clone <URL_DEL_REPOSITORIO>
-    cd data-engineering-project
-    ```
+
+```bash
+git clone <URL_DEL_REPOSITORIO>
+cd data-engineering-project
+```
 
 2. Crea un archivo .env en la raíz del proyecto con las siguientes variables:
-    ```env
-    DATABASE_URL=postgresql://user:password@localhost:5432/mydatabase
-    API_KEY=your_api_key_here
-    ```
+
+```env
+DATABASE_URL=postgresql://user:password@localhost:5432/mydatabase
+API_KEY=your_api_key_here
+```
 
 3. Construye y levanta los servicios de Docker:
-    ```bash
-    docker-compose up --build
-    ```
+
+``` bash
+docker-compose up --build
+```
 
 4. Abre el proyecto en VS Code (opcional):
-    ```bash
-    code .
-    ```
+
+```bash
+code .
+```
 
 ### Uso
 #### Ejecutar el Proyecto
@@ -53,9 +98,9 @@ Para ejecutar el flujo ETL, puedes usar el archivo main.py:
 #### Ejecutar Pruebas Unitarias
 Para ejecutar las pruebas unitarias, usa el siguiente comando:
 
-    ```python
-    python -m unittest discover tests
-    ```
+```bash
+python -m unittest discover tests
+```
 
 #### Acceder a la Interfaz Web de Airflow
 La interfaz web de Airflow estará disponible en `http://localhost:8080`.
@@ -79,9 +124,6 @@ La interfaz web de Airflow estará disponible en `http://localhost:8080`.
 Las dependencias del proyecto están listadas en el archivo requirements.txt:
 
 ```txt
-# Airflow y dependencias
-apache-airflow==2.3.0
-
 # Web scraping
 requests
 beautifulsoup4
@@ -98,6 +140,7 @@ jupyter
 
 # Formatos de archivo
 json
+lxml
 
 # Kafka para streaming de datos
 kafka-python
